@@ -47,16 +47,16 @@ st.subheader("Price Analysis Across Shopping Malls by Gender and Selected Column
 st.markdown("---------------------------------------------------------------------------")
 if select_cols1:
     if select_cols in numerical_cols:
-        fig = px.box(df,x=select_cols1,y="price",title=f"price variation by {select_cols1}")
-    st.plotly_chart(fig)
+        fig1 = px.box(df,x=select_cols1,y="price",title=f"price variation by {select_cols1}")
+    st.plotly_chart(fig1)
 
 st.subheader("Payment Method Distribution by Gender")
 st.markdown("---------------------------------------------------------------------------")
-fig1 = plt.figure(figsize=(14,4))
+fig2 = plt.figure(figsize=(14,4))
 sns.countplot(x='payment_method',data=df,hue='gender')
-st.pyplot(fig1)
+st.pyplot(fig2)
 
 st.subheader("Price Distribution Across Categories by Gender")
 st.markdown("---------------------------------------------------------------------------")
-fig2 = px.histogram(df,x="category",y="price",color="gender",marginal="box")
-st.plotly_chart(fig2)
+fig3 = px.histogram(df,x="category",y="price",color="gender",marginal="box")
+st.plotly_chart(fig3)
