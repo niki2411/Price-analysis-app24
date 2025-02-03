@@ -5,6 +5,7 @@ import datetime
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
 
 df = pd.read_csv("customer_shopping_data.csv")
 st.title("Price Analysis Based on the Customer Shopping Data")
