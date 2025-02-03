@@ -24,8 +24,6 @@ female_customers = df[df['gender'] == 'Female'].head(10)
 male_customers = df[df['gender'] == 'Male'].head(10)
 gender_option = st.radio("Select Gender:", ["Female", "Male"])
 
-
-
 if cust_cols:
     if select in cust_cols:
         if gender_option == "Female":
