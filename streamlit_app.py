@@ -50,7 +50,7 @@ if select_cols1:
     if select_cols in numerical_cols:
         fig1 = px.box(df,x=select_cols1,y="price",title=f"price variation by {select_cols1}")
     else:
-        fig1 = px.scatter(df, x=select_cols1,y="price",color='shopping_mall',symbol= gender_option,trendline="ols",title=f"Price vs {select_cols1}")
+        fig1 = px.scatter(df, x=select_cols1,y="price",color='shopping_mall',symbol='gender',trendline="ols",title=f"Price vs {select_cols1}")
     st.plotly_chart(fig1)
 
 st.subheader("Payment Method Distribution by Gender")
